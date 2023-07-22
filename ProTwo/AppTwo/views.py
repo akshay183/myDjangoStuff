@@ -4,3 +4,11 @@ from django.http import HttpResponse
 
 def index(request):
     return HttpResponse('<em> My Second Application</em>')
+
+def help(request):
+    
+    my_response_template = {
+        "insertContent":"Help me!"
+    }
+    
+    return render(request,"AppTwo/help.html",my_response_template)
